@@ -83,20 +83,20 @@ body{
 
 @media (max-width: 745px) {
   body {
-    background-image: url('../src/assets/images/background-mobile.png');
+    background-image: url('/Images/background-mobile.png');
    
   }
 }
 
 @media (min-width: 745px) and (max-width: 1199px) {
   body {
-    background-image: url('../src/assets/images/background-tablet.png');
+    background-image: url('/Images/background-tablet.png');
   }
 }
 
 @media (min-width: 1199px) {
   body {
-    background-image: url('../src/assets/images/background-desktop.png');
+    background-image: url('/Images/background-desktop.png');
   }
 }
 h1{

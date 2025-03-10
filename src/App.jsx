@@ -10,6 +10,7 @@ import PatternLines from '../src/assets/Images/pattern-lines.svg'
 import PatternCircle from '../src/assets/Images/pattern-circle.svg'
 
 
+
 function App() {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [ticketData,setTicketData] = useState(null)
