@@ -1,0 +1,149 @@
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 33rem;
+    margin-inline: auto;
+    padding-bottom: 4rem;
+    
+}
+p{
+    color: var(--clr-neutral300);
+}
+
+.Form-container{
+    padding-inline: 1rem;
+    z-index: 3;
+}
+
+.Form-control{
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    z-index: 3;
+
+}
+.Form-control label{
+    color: white;
+    font-size: var(--fs-5);
+    line-height: 120%;
+    letter-spacing: -0.5px;
+}
+.Form-control input{
+    padding: 1rem;
+    font-size: var(--fs-6);
+    border-radius: 12px;
+    border: 1px solid var(--clr-neutral500);
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--clr-neutral300);
+    
+     
+}
+
+.Form-control input:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Change the background color on hover */
+  }
+.Form-control input:focus{
+    border: 1px solid white;
+    outline: 2px solid white;
+    outline-offset: 5px;
+}
+
+.Form-control input:hover, 
+button:hover{
+    cursor: pointer;
+    
+}
+.Form-control input:hover{
+    background-color: transparent;
+}
+
+.Form-control .error-msg{
+    display: flex;
+    gap: 0.5rem;
+    color: var(--clr-orange500);
+    font-size: var(--fs-7);
+    line-height: 120%;
+    letter-spacing: -0.2px;
+}
+.Form-control .error-msg img {
+    filter: invert(58%) sepia(81%) saturate(5211%) hue-rotate(338deg) brightness(109%) contrast(76%);
+  }
+
+.Form-control .error-msg p{
+    align-self: center;
+}
+.Form-control .error-msg.hidden{
+    display: none;
+}
+button:hover {
+    background-color: var(--clr-orange700); /* Darker shade on hover */
+  }
+
+.avatar-container{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px dashed white;
+    border-radius: 12px;
+    cursor: pointer;
+    align-items: center;
+    padding: 1rem;
+}
+.avatar-container.dragging {
+    background-color: rgba(255, 255, 255, 0.2); /* Change background color when dragging */
+  }
+.avatar-container img{
+    height: 50px;
+    align-self: center;
+}
+.avatar-container p{
+    color: var(--clr-neutral300);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.avatar-container .uploaded-image{
+    display: flex;
+    align-self: center;
+    height: 50px;
+    width: 50px;
+}
+
+.avatar-container button{
+    cursor: pointer;
+    width: max-content;
+    height: fit-content;
+    font-size: 12px;
+    padding: 0.5rem;
+    border-radius: 6px;
+    color: var(--clr-neutral300);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.avatar-container .uploaded-image-container{
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.empty-image-container{
+    display: flex;
+    flex-direction: column;
+}
+  
+.uploaded-image{
+    margin-bottom: 1rem;
+}
+.image-buttons{
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    padding-block: 0;
+   
+}
+.upload-info{
+    display: flex;
+}
+.upload-info{
+    font-size: var(--fs-7);
+}

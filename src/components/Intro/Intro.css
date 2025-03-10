@@ -1,0 +1,20 @@
+.Intro-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-block: 2.5rem;
+    max-width: 55rem;
+    text-align: center;
+    margin-inline: auto;
+    
+  }
+.Intro-container h1{
+    color: white;
+    line-height: 110%;
+    letter-spacing: -1.8px;
+}
+.Intro-container h4{
+    color: var(--clr-neutral300);
+    line-height: 110%;
+    letter-spacing: -0.5px;
+}

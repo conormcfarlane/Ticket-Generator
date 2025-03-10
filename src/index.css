@@ -1,0 +1,188 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+:root{
+  --clr-neutral900: #0D082D;
+  --clr-neutral700: #4B4869;
+  --clr-neutral500: #8784A5;
+  --clr-neutral300: #D1D0D5;
+  --clr-orange700: #E1604F;
+  --clr-orange500: #F57463;
+  --clr-gradient: linear-gradient(90deg, #F37362 0%, #FFF 100%);
+  --fs-1: clamp(1.875rem, 0.4787rem + 6.383vw, 3.75rem);
+  --fs-2: clamp(1.5rem, 0.7553rem + 3.4043vw, 2.5rem);
+  --fs-3: clamp(1.375rem, 1.0027rem + 1.7021vw, 1.875rem);
+  --fs-4: clamp(1.25rem, 1.0638rem + 0.8511vw, 1.5rem);
+  --fs-5: 1.25rem;
+  --fs-6: clamp(0.875rem, 0.6888rem + 0.8511vw, 1.125rem);
+  --fs-7: 0.75rem;
+}
+/* inconsolata-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../src/assets/Fonts/inconsolata-v32-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inconsolata-800 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 800;
+  src: url('../src/assets/Fonts/inconsolata-v32-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+body{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column; 
+  font-family: 'Inconsolata';
+  position: relative;
+ 
+ }
+
+@media (max-width: 745px) {
+  body {
+    background-image: url('./assets/images/background-mobile.png');
+   
+  }
+}
+
+@media (min-width: 745px) and (max-width: 1199px) {
+  body {
+    background-image: url('./assets/images/background-tablet.png');
+  }
+}
+
+@media (min-width: 1199px) {
+  body {
+    background-image: url('./assets/images/background-desktop.png');
+  }
+}
+h1{
+  font-size: var(--fs-1); 
+}
+h2{
+  font-size: var(--fs-2); 
+}
+h3{
+  font-size: var(--fs-3); 
+}
+h4{
+  font-size: var(--fs-4); 
+}
+h5{
+  font-size: var(--fs-5); 
+}
+h6{
+  font-size: var(--fs-6); 
+}
+button{
+  width: 100%;
+  background-color: var(--clr-orange500);
+  padding-block: 1rem;
+  border-radius: 12px;
+  border: none;
+  color: black;
+  letter-spacing: -0.3px;
+  line-height: 100%;
+  font-size: var(--fs-5);
+  font-weight: bold;
+  margin-bottom: 2rem;
+  transition: background-color 0.3s ease;
+}
+.wrapper{
+  margin-inline: auto;
+  padding: 1rem;
+  overflow: hidden;
+  position: relative;
+  
+}
+#pattern-lines{
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+#pattern-squig{
+  position: absolute;
+  right: 0;
+  top: 5%;
+  width: 112px;
+  z-index: -1;
+}
+#bottom-pattern-mobile{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(0px);
+  z-index: -1;
+  
+}
+#pattern-circle{
+  position: absolute;
+  bottom: 35%;
+  right: -10%;
+  z-index: -1;
+}
+@media (min-width: 745px){
+  .wrapper{
+    padding: 2rem;
+  }
+  #pattern-squig{
+    transform: translateY(70%);
+    width: 232px;
+  }
+  #bottom-pattern-mobile{
+    transform: translateY(30%);
+  }
+}
+@media (min-width: 1199px){
+  #pattern-squig{
+    transform: translateY(35%);
+    width: 450px;
+    right: 0;
+  }
+  #pattern-circle{
+    right: 20%;
+  }
+}

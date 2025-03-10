@@ -1,0 +1,18 @@
+header{
+    text-align: center;
+    max-width: fit-content;
+    margin-inline: auto;
+    margin-top: 2rem;
+  }
+  header img{
+    background-color: var(--clr-neutral900);
+    height: 1.5rem;
+  }
+  @media (min-width: 745px){
+    header{
+      margin-top: 2.5rem;
+    }
+    header img{
+      height: 2rem;
+    }
+  }
